@@ -7,8 +7,49 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="#">Test App</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+        <ul class="nav">
+        	<li><%= link_to "Browse Product", products_path %></li>
+        	<li><%= link_to "Categories", categories_path %></li>
+        	<li><%= link_to "Sub Categories", sub_categories_path %></li>
+        </ul>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+<div class="container">
+	
+	<% flash.each do |name, msg| %>
+	<div class="alert alert-<%= name == :notice ? "success": "error" %>"><a class="close" data-dismiss="alert">x</a>
+		<%= msg %>
+	</div>
+	<% end %>
 
-<%= yield %>
+	<div class="row">
+		<div class="span9"><%= yield %></div>
+		<div class="span3">
+			<h2>About Us</h2>
+			<p>Lorem ipsum dolor sit amet, conceptam rationibus ex mea, mea et facete tacimates. Verear salutandi sed at, per ex agam aperiri scriptorem. Eos ne graeco oportere, ad per labore honestatis instructior. Tibique consulatu similique no eum, quando veniam ne duo. Ea eum mutat senserit deterruisset, verterem constituto deterruisset cu ius, argumentum philosophia ea per. Illum ignota eu per, an mollis prompta has.</p>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

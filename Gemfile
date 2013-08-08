@@ -42,6 +42,10 @@ group :production do
 	gem 'rails_12factor', '0.0.2'
 end
 
+gem 'simple_form'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
