@@ -20,6 +20,10 @@
   <dd><%= @product.serial %></dd>
 </dl>
 
+<%= image_tag @product.avatar.url %>
+<%= image_tag @product.avatar.url(:medium) %>
+<%= image_tag @product.avatar.url(:thumb) %>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               products_path, :class => 'btn'  %>

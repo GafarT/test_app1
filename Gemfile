@@ -46,6 +46,8 @@ gem 'simple_form'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+
+gem 'paperclip', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
